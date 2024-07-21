@@ -1,2 +1,2 @@
-./terraform/terraform_with_variables/keys/*
-./mage-docker/REP_my_creds.json
+terraform/terraform_with_variables/keys/*
+mage-docker/REP_my_creds.json
