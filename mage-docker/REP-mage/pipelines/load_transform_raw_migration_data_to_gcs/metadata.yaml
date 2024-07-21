@@ -1,0 +1,40 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: grey
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_transform_migration_2017-2022-to-gcs
+  retry_config: null
+  status: updated
+  timeout: null
+  type: custom
+  upstream_blocks: []
+  uuid: load_transform_migration_2017_2022_to_gcs
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-07-21 00:46:08.397658+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: load_transform_raw_migration_data_to_gcs
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: load_transform_raw_migration_data_to_gcs
+variables_dir: /home/src/mage_data/REP-mage
+widgets: []
