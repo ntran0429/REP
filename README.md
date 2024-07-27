@@ -83,6 +83,6 @@ These are the factors that determine the "best" state for rental property invest
 There will be a dashboard with multiple other report pages to get into the details of the analysis.
 Some of the report pages include Migration Trends, Housing Analysis, Quality of Life, Policy and Regulation, etc.
 
-I'm currently working on the Migration Trends page. Here's my work in progress: 
+I'm almost done with the Migration Trends page. Here's my work in progress: 
 
 ![migration-trends-in-progress](https://github.com/user-attachments/assets/7d728657-e608-46a1-a13d-c322b4e0f253)
