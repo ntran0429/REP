@@ -6,6 +6,7 @@ import re
 import os
 from os import path
 import io
+import xlrd
 import requests
 from google.cloud import storage
 
@@ -36,7 +37,7 @@ def upload_to_gcs(bucket, object_name, local_file):
 def transform_files(final_file_name):
     # Import all migration data
     path = r'/home/src/'
-    all_files = glob.glob(path + '/*.xlsx')
+    all_files = glob.glob(path + '/*.xls') + glob.glob(path + '/*.xlsx')
 
     li = []
 
@@ -92,10 +93,21 @@ def transform_files(final_file_name):
     df_long = pd.melt( migration_df, id_var , id_values, 'from', 'number_of_people' )
 
 
-    df_long.to_csv(final_file_name, index=False)
-    print(f"Saved locally: {final_file_name}")
+    df_long.to_csv(f'{final_file_name}.csv', index=False)
+    print(f"Saved locally: {final_file_name}.csv")
+
+    df_long.to_parquet(f'{final_file_name}.parquet', index=False)
+    print(f"Saved locally: {final_file_name}.parquet")
 
     return df_long
+
+
+# def get_available_years() -> List[int]:
+#     """
+#     this function scrapes web page: https://www.census.gov/data/tables/time-series/demo/geographic-mobility/state-to-state-migration.html
+#     to get a dataframe of Excel spreadsheets and their data years 
+#     to monitor for new annual migration data release
+#     """
 
 
 @custom
@@ -105,9 +117,14 @@ def load_raw_migration_data_to_gsc(*args, **kwargs):
 
     Returns:
         Anything (e.g. data frame, dictionary, array, int, str, etc.)
+
+    Context: this script loads migration data annually (every November) from Census
+    Census releases a spreadsheet detailing migration data each year
+    eg. https://www.census.gov/newsroom/press-releases/2023/state-to-state-migration-flows.html
     """
     # Specify your custom logic here
 
+    # years = get_available_years()
     years = [2017, 2018, 2019, 2021, 2022]
     base_url = 'https://www2.census.gov/programs-surveys/demo/tables/geographic-mobility/'
 
@@ -129,17 +146,17 @@ def load_raw_migration_data_to_gsc(*args, **kwargs):
         open(file_name, 'wb').write(r.content)
         print(f"Saved locally: {file_name}")
         
-        upload_to_gcs(bucket_name, f"raw/state-to-state-migratioWn-{year}", file_name)
+        upload_to_gcs(bucket_name, f"raw/state-to-state-migration-{year}", file_name)
         print(f"Uploaded raw files to GCS: {file_name}")
         
 
 
 
-    transformed_file_name = 'migration_2017-2022.csv'
+    transformed_file_name = 'migration_2017-2022'
     # tidy all files, combine into one file, save file locally
     migration_df = transform_files(transformed_file_name)
 
-    upload_to_gcs(bucket_name, f"cleansed/migration_2017-2022", transformed_file_name)
+    upload_to_gcs(bucket_name, f"cleansed/{transformed_file_name}.parquet", f'{transformed_file_name}.parquet')
     print(f"Uploaded transformed files to GCS: {transformed_file_name}")
 
     

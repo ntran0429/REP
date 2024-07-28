@@ -163,10 +163,10 @@ def transform(cps_move_reason_df, *args, **kwargs):
         "state_of_residence"
     ].replace("New York, USA", "NY, USA")
 
-    # remove index column
+    # reset index column
     movers_weighted.reset_index(drop=True, inplace=True)
 
-    # print(movers_weighted["year_surveyed"].unique())
+    # print(movers_weighted.head())
 
     return movers_weighted
 
