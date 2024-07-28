@@ -1,4 +1,7 @@
 # Real Estate Investment Guide for Foreign Investors
+![REP Diagram](https://github.com/user-attachments/assets/2800da61-f047-45de-8526-9f72f93ab7c8)
+
+
 
 ## Table of Contents
 
