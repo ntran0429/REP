@@ -81,7 +81,7 @@ These are the factors that determine the "best" state for rental property invest
 
 
 
-## Progress made
+## Progress Made
 
 There will be a dashboard with multiple other report pages to get into the details of the analysis.
 Some of the report pages include Migration Trends, Housing Analysis, Quality of Life, Policy and Regulation, etc.
