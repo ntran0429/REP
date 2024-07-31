@@ -1,5 +1,5 @@
 # Real Estate Investment Guide for Foreign Investors
-![REP Diagram](https://github.com/user-attachments/assets/2800da61-f047-45de-8526-9f72f93ab7c8)
+![REP Diagram](https://raw.githubusercontent.com/ntran0429/ntran0429.github.io/master/images/REP_Diagram.png)
 
 
 
@@ -88,4 +88,4 @@ Some of the report pages include Migration Trends, Housing Analysis, Quality of 
 
 I'm almost done with the Migration Trends page. Here's my work in progress: 
 
-![migration-trends-in-progress](https://github.com/user-attachments/assets/7d728657-e608-46a1-a13d-c322b4e0f253)
+![migration-trends-in-progress](https://raw.githubusercontent.com/ntran0429/ntran0429.github.io/master/images/migration-trends-page.PNG)
