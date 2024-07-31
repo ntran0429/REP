@@ -21,9 +21,8 @@
 
 This report/dashboard serves as a guide for a foreign investor looking to invest into the US rental market, particularly multiple-unit properties (duplex, triplex, etc.).
 
-### Potential Extra Features
-
-* Consumer level: recommend states/cities to live based on personal preferences
+**Potential Extra Features**
+* Homebuyer: recommend states/cities to live based on personal preferences
 * House price prediction
 
 ## Context
@@ -39,7 +38,8 @@ This report/dashboard serves as a guide for a foreign investor looking to invest
 
 ### Business Question
 
-What are the best states/areas to invest in the US rental market?
+1. What are the best states/areas to invest in the US rental market?
+2. Once identified a state, which metro areas / neighborhoods are best to invest?
 
 ### Frame the Business Problem into a Data Question
 
