@@ -19,6 +19,22 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
+  - write_unemp_rate_state_to_bq
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_unemp_rate_from_gcs
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_unemp_rate_from_gcs
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
   - write_migration_data_to_bq
   executor_config: null
   executor_type: local_python
@@ -50,6 +66,24 @@ blocks:
   upstream_blocks:
   - load_move_reason_from_gcs
   uuid: write_move_reason_data_to_bq
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_source:
+      path: data_exporters/write_unemp_rate_state_to_bq.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: write_unemp_rate_state_to_bq
+  retry_config: null
+  status: not_executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - load_unemp_rate_from_gcs
+  uuid: write_unemp_rate_state_to_bq
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}

@@ -53,3 +53,12 @@ notification_config:
   teams_config:
     webhook_url: "{{ env_var('MAGE_TEAMS_WEBHOOK_URL') }}"
 project_uuid: 57aec739020b4e3e9f61775000001864
+features:
+  command_center: true
+  add_new_block_v2: true
+  data_integration_in_batch_pipeline: true
+  dbt_v2: true
+  display_local_timezone: true
+  notebook_block_output_split_view: true
+  polars: true
+pipelines:

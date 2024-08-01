@@ -1,0 +1,97 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - process_unemp_rate
+  - export_raw_unemp_rate_to_gcs
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_unemp_rate
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: load_unemp_rate
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_raw_unemp_rate_to_gcs
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - load_unemp_rate
+  uuid: export_raw_unemp_rate_to_gcs
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: transformers/process_unemp_rate.py
+    file_source:
+      path: transformers/process_unemp_rate.py
+  downstream_blocks:
+  - export_cleansed_unemp_rate_to_gcs
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: process_unemp_rate
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - load_unemp_rate
+  uuid: process_unemp_rate
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: data_exporters/export_cleansed_unemp_rate_to_gcs.py
+    file_source:
+      path: data_exporters/export_cleansed_unemp_rate_to_gcs.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_cleansed_unemp_rate_to_gcs
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - process_unemp_rate
+  uuid: export_cleansed_unemp_rate_to_gcs
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-07-30 14:37:55.874013+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: load_unemp_rate_by_state_to_gcs+bq
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: load_unemp_rate_by_state_to_gcs_bq
+variables_dir: /home/src/mage_data/REP-mage
+widgets: []
