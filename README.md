@@ -1,5 +1,5 @@
 # Real Estate Investment Guide for Foreign Investors
-![REP Diagram](https://github.com/user-attachments/assets/2800da61-f047-45de-8526-9f72f93ab7c8)
+![REP Diagram](https://raw.githubusercontent.com/ntran0429/ntran0429.github.io/master/images/REP_Diagram.png)
 
 
 
@@ -21,9 +21,8 @@
 
 This report/dashboard serves as a guide for a foreign investor looking to invest into the US rental market, particularly multiple-unit properties (duplex, triplex, etc.).
 
-### Potential Extra Features
-
-* Consumer level: recommend states/cities to live based on personal preferences
+**Potential Extra Features**
+* Homebuyer: recommend states/cities to live based on personal preferences
 * House price prediction
 
 ## Context
@@ -39,7 +38,8 @@ This report/dashboard serves as a guide for a foreign investor looking to invest
 
 ### Business Question
 
-What are the best states/areas to invest in the US rental market?
+1. What are the best states/areas to invest in the US rental market?
+2. Once identified a state, which metro areas / neighborhoods are best to invest?
 
 ### Frame the Business Problem into a Data Question
 
@@ -88,4 +88,4 @@ Some of the report pages include Migration Trends, Housing Analysis, Quality of 
 
 I'm almost done with the Migration Trends page. Here's my work in progress: 
 
-![migration-trends-in-progress](https://github.com/user-attachments/assets/7d728657-e608-46a1-a13d-c322b4e0f253)
+![migration-trends-in-progress](https://raw.githubusercontent.com/ntran0429/ntran0429.github.io/master/images/migration-trends-page.PNG)
