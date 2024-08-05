@@ -89,3 +89,5 @@ Some of the report pages include Migration Trends, Housing Analysis, Quality of 
 I'm almost done with the Migration Trends page. Here's my work in progress: 
 
 ![migration-trends-in-progress](https://raw.githubusercontent.com/ntran0429/ntran0429.github.io/master/images/migration-trends-page.PNG)
+
+The next and final report page is Housing Analysis, where the investor can drill down into each state and its respective metro areas with important metrics that help her determine which area to invest into.
