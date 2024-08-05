@@ -1,3 +1,4 @@
 ipumspy
 xlrd
 datacommons_pandas
+gcsfs

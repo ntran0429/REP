@@ -1,0 +1,103 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    dynamic: true
+    file_path: data_loaders/return_list_of_apartmentlist_data_file_names.py
+    file_source:
+      path: data_loaders/return_list_of_apartmentlist_data_file_names.py
+  downstream_blocks:
+  - load_apartmentlist_data_from_gcs
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: return_list_of_apartmentlist_data_file_names
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: return_list_of_apartmentlist_data_file_names
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: data_loaders/load_apartmentlist_data_from_gcs.py
+    file_source:
+      path: data_loaders/load_apartmentlist_data_from_gcs.py
+  downstream_blocks:
+  - pivot_apartmentlist_data
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: load_apartmentlist_data_from_gcs
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks:
+  - return_list_of_apartmentlist_data_file_names
+  uuid: load_apartmentlist_data_from_gcs
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: transformers/pivot_apartmentlist_data.py
+  downstream_blocks:
+  - export_apartmentlist_data_to_bq
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: pivot_apartmentlist_data
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - load_apartmentlist_data_from_gcs
+  uuid: pivot_apartmentlist_data
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: data_exporters/export_apartmentlist_data_to_bq.py
+    file_source:
+      path: data_exporters/export_apartmentlist_data_to_bq.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_apartmentlist_data_to_bq
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - pivot_apartmentlist_data
+  uuid: export_apartmentlist_data_to_bq
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2024-08-04 18:18:16.916096+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: load_apartmentlist_data_to_bq
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: load_apartmentlist_data_to_bq
+variables_dir: /home/src/mage_data/REP-mage
+widgets: []
