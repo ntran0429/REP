@@ -52,27 +52,6 @@ blocks:
   uuid: load_rent_growth_yoy_from_apartmentlist
 - all_upstream_blocks_executed: true
   color: null
-  configuration:
-    file_source:
-      path: data_exporters/export_raw_apartmentlist_data_to_gcs.py
-  downstream_blocks: []
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: python
-  name: export_raw_apartmentlist_data_to_gcs
-  retry_config: null
-  status: executed
-  timeout: null
-  type: data_exporter
-  upstream_blocks:
-  - load_rent_estimates_from_apartmentlist
-  - load_rent_growth_mom_from_apartmentlist
-  - load_rent_growth_yoy_from_apartmentlist
-  - load_vacancy_index_from_apartmentlist
-  uuid: export_raw_apartmentlist_data_to_gcs
-- all_upstream_blocks_executed: true
-  color: null
   configuration: {}
   downstream_blocks:
   - export_raw_apartmentlist_data_to_gcs
@@ -87,6 +66,27 @@ blocks:
   type: data_loader
   upstream_blocks: []
   uuid: load_vacancy_index_from_apartmentlist
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_exporters/export_raw_apartmentlist_data_to_gcs.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_raw_apartmentlist_data_to_gcs
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - load_rent_estimates_from_apartmentlist
+  - load_rent_growth_mom_from_apartmentlist
+  - load_rent_growth_yoy_from_apartmentlist
+  - load_vacancy_index_from_apartmentlist
+  uuid: export_raw_apartmentlist_data_to_gcs
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
