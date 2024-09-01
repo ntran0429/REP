@@ -14,6 +14,7 @@
     * [State-to-State Migration](#state-to-state-migration)
     * [Housing Analysis](#housing-analysis)
 * [Deliverable](#deliverable)
+* [Next steps / Improvements](#next-steps--improvements)
 
 ## Problem Statement
 
