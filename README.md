@@ -11,11 +11,9 @@
   * [Business Question](#business-question)
   * [Frame the Business Problem into a Data Question](#frame-the-business-problem-into-a-data-question)
   * [Components to Answer the Question](#components-to-answer-the-question)
-    * [Migration Trends](#migration-trends)
-    * [Economic and Housing Analysis](#economic-and-housing-analysis)
-    * [Social Trend / Quality of Life](#social-trend--quality-of-life)
-    * [Policy and Regulation](#policy-and-regulation)
-* [Progress Made](#progress-made)
+    * [State-to-State Migration](#state-to-state-migration)
+    * [Housing Analysis](#housing-analysis)
+* [Deliverable](#deliverable)
 
 ## Problem Statement
 
@@ -34,7 +32,7 @@ This report/dashboard serves as a guide for a foreign investor looking to invest
 * Property types: duplex, triplex, quadplex, condo, townhouse
 * Investment strategies: **long-term**, mid-term, **house hacking**
 * Define the best state(s): cashflow (cash on cash return) and property quality
-* Deliverables: recommended areas with reasons, within each recommended state
+* Expected insights: recommended areas with reasons, within each recommended state
 
 ### Business Question
 
@@ -48,46 +46,49 @@ This report/dashboard serves as a guide for a foreign investor looking to invest
 	+ **Property quality is measured by property value over time**
 * What are the most likely states/areas to deliver the best cashflow and property quality over the next 5 years? (analytical and predictive)
 	+ **Migration trends:** rate at which people are moving in, factors for movers
-	+ **Economic and housing:** employment, growing or stable job market?, resources, property value over time, supply: # rental properties available, demand: # people looking to rent
-	+ **Quality of life:** resources, crime rates, education quality (average school rating), quality of care ([average hospital safety grade rating](https://www.hospitalsafetygrade.org/search?findBy=state&zip_code=&city=&state_prov=TX&hospital=))
-	+ **Policy and regulation:** favorable tax policies for investors (effective property tax rate)?, incentives for real estate development, government planning, Landlord-Tenant Laws (efficiency of eviction procedures, tenant rights and investor protections)
+	+ **Housing:** employment, growing or stable job market?, resources, property value over time, supply: # rental properties available, demand: # people looking to rent
 
 ### Components to Answer the Question
 
 These are the factors that determine the "best" state for rental property investing
 
-#### Migration Trends
+#### State-to-State Migration
 
+* State GDP growth
+* Employment rates
 * Can we predict the next up and coming inbound and outbound states?
 * Where are people leaving from and going to?
 * What are the factors driving people away from, or towards, a certain location?
 * What are the effects of state to state migration and how does it affect the country as a whole?
 
-#### Economic and Housing Analysis
+#### Housing Analysis
 
-* State GDP growth
-* Employment rates
 * Housing analysis
 	+ Analyze factors influencing housing market trends
 	+ High or low homeownership rates
 	+ Cashflow vs property quality
 	+ How to find quality tenants?
 
-#### Social Trend / Quality of Life
 
-* Resources, business headquarters
+## Deliverable
 
-#### Policy and Regulation
+The report pages include State-to-State Migration and Housing Analysis.
+
+I'm done creating a Minimum Viable Product (MVP) PBI report:
+
+**State-to-State Migration**, where the investor can have an overview look at how and why people move from/to different states:
+
+![migration](https://raw.githubusercontent.com/ntran0429/REP/main/images/migration-trends-page.PNG)
+
+**Housing Analysis**, where the investor can drill down into each state and its respective metro areas with important metrics that help her determine which area to invest into:
+
+![housing](https://raw.githubusercontent.com/ntran0429/REP/main/images/housing-page.PNG)
 
 
+## Next steps / Improvements
 
-## Progress Made
-
-There will be a dashboard with multiple other report pages to get into the details of the analysis.
-Some of the report pages include Migration Trends, Housing Analysis, Quality of Life, Policy and Regulation, etc.
-
-I'm almost done with the Migration Trends page. Here's my work in progress: 
-
-![migration-trends-in-progress](https://raw.githubusercontent.com/ntran0429/ntran0429.github.io/master/images/migration-trends-page.PNG)
-
-The next and final report page is Housing Analysis, where the investor can drill down into each state and its respective metro areas with important metrics that help her determine which area to invest into.
+* Currently, the Azure map is used for State-to-State Migration page, which is not supported for Publish to Web. Need to convert it to Bing map for the report to be usable when embedded.
+* Format the report to be more professional
+* Include household income from Census to calculate household income to rent ratio
+* Include metro population over time to calculate population growth
+* Include data at the county level for Housing Analysis page
