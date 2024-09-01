@@ -75,7 +75,7 @@ These are the factors that determine the "best" state for rental property invest
 
 The report pages include State-to-State Migration and Housing Analysis.
 
-I'm done creating a Minimum Viable Product (MVP) PBI report:
+Here is the Minimum Viable Product (MVP) for the PBI report:
 
 **State-to-State Migration**, where the investor can have an overview look at how and why people move from/to different states:
 
