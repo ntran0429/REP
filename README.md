@@ -1,5 +1,5 @@
 # Real Estate Investment Guide for Foreign Investors
-![REP Diagram](https://raw.githubusercontent.com/ntran0429/ntran0429.github.io/master/images/REP_Diagram.png)
+![REP Diagram](https://raw.githubusercontent.com/ntran0429/REP/main/images/REP_Diagram.png)
 
 
 
