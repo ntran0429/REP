@@ -14,7 +14,7 @@
     * [State-to-State Migration](#state-to-state-migration)
     * [Housing Analysis](#housing-analysis)
 * [Deliverable](#deliverable)
-* [Next steps / Improvements](#next-steps--improvements)
+* [Next steps & Improvements](#next-steps--improvements)
 
 ## Problem Statement
 
@@ -86,7 +86,7 @@ Here is the Minimum Viable Product (MVP) for the PBI report:
 ![housing](https://raw.githubusercontent.com/ntran0429/REP/main/images/housing-page.PNG)
 
 
-## Next steps / Improvements
+## Next steps & Improvements
 
 * Currently, the Azure map is used for State-to-State Migration page, which is not supported for Publish to Web. Need to convert it to Bing map to make the report usable when embedded
 * Dynamically change the [selected state] for State-to-State Migration page
