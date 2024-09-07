@@ -88,8 +88,10 @@ Here is the Minimum Viable Product (MVP) for the PBI report:
 
 ## Next steps / Improvements
 
-* Currently, the Azure map is used for State-to-State Migration page, which is not supported for Publish to Web. Need to convert it to Bing map for the report to be usable when embedded.
-* Format the report to be more professional
+* Currently, the Azure map is used for State-to-State Migration page, which is not supported for Publish to Web. Need to convert it to Bing map to make the report usable when embedded
+* Dynamically change the [selected state] for State-to-State Migration page
+* Format the report to be presentation ready
+* Include appreciation metric (to create DAX measure for listing price YoY; data sourced from Realtor)
 * Include household income from Census to calculate household income to rent ratio
 * Include metro population over time to calculate population growth
 * Include data at the county level for Housing Analysis page
